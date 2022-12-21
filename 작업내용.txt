@@ -1,0 +1,19 @@
+article을 클릭하면 팝업창이 뜨게
+	for(const aa of items)
+		클릭한 article의 정보 변수 저장 (e.currentTarget.querySelector())
+		변수적용 (setAttribute, innerText)
+		pop에 'on'클래스 적용 (classList.add('on'))
+popup창을 클릭하면 popup창이 사라짐
+	addEventListener('click',()=>{})
+		classList.remove
+
+모바일에서는 popup창 안뜨도록
+	article 클릭할 때 width 너비 구하기
+		document.body.clientWidth
+	if구문을 활용하여 너비가 767보다 큰경우에만 popup관련 스크립트 적용
+
+popup창이 떴을 때 사이즈를 줄이면 popup창 사라지게 하기
+	window.addEventListener('resize',()=>{})
+		767보다 작으면 'on'클래스 제거 (remove)
+
+

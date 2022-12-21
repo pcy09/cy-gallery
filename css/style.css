@@ -1,0 +1,285 @@
+ul:after,
+section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+body a {
+  text-decoration: none;
+}
+body * {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #333;
+}
+header h1 {
+  font-family: "Zen Antique", serif;
+  font-size: 6em;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  letter-spacing: 0.04em;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-150%);
+  line-height: 1.3;
+}
+header h1:before {
+  content: "";
+  display: block;
+  content: "FRONTEND GALLERY";
+  width: 100%;
+  position: absolute;
+  bottom: -1.4em;
+  left: 0.4em;
+  font-size: 0.2em;
+  opacity: 0.7;
+}
+header h1:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #fff;
+  margin-left: 5px;
+}
+@media (max-width:1599px) {
+  header h1 {
+    left: 20px;
+  }
+}
+@media (max-width:1199px) {
+  header h1 {
+    transform: translateY(-50%);
+    font-size: 3.5em;
+    font-weight: 400;
+  }
+  header h1:before {
+    display: none;
+  }
+  header h1:after {
+    width: 70px;
+  }
+}
+@media (max-width:539px) {
+  header h1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header h1:after {
+    width: 95%;
+  }
+}
+header .sns {
+  position: absolute;
+  bottom: 100px;
+  right: 8em;
+}
+header .sns li {
+  float: left;
+  margin: 0 1em;
+}
+header .sns li a {
+  color: #fff;
+  font-size: 1.3em;
+}
+header .sns li a i {
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+@media (max-width:1199px) {
+  header .sns {
+    top: 60%;
+    right: 1em;
+    bottom: auto;
+  }
+}
+@media (max-width:539px) {
+  header .sns {
+    display: none;
+  }
+}
+@media (max-width:899px) {
+  header .sns span {
+    display: none;
+  }
+}
+@media (max-width:1599px) {
+  header {
+    width: 350px;
+  }
+}
+@media (max-width:1199px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+main {
+  margin-left: 400px;
+  padding: 20px;
+}
+@media (max-width:1599px) {
+  main {
+    margin-left: 350px;
+  }
+}
+@media (max-width:1199px) {
+  main {
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+nav li {
+  float: right;
+  width: 100px;
+  height: 25px;
+  margin-left: 20px;
+}
+nav li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: #999;
+  text-align: center;
+  line-height: 25px;
+  font-family: "Zen Antique", serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+nav li a:hover {
+  background: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+@media (max-width:539px) {
+  nav li {
+    width: 33.33%;
+    margin-left: 0;
+    text-align: center;
+  }
+  nav li a {
+    width: 90%;
+  }
+}
+nav li.on a {
+  background: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+article {
+  cursor: pointer;
+  width: 20%;
+  float: left;
+  overflow: hidden;
+}
+article > div {
+  padding: 20px;
+  border-radius: 5px;
+}
+article > div .imgWrap {
+  overflow: hidden;
+}
+article > div .imgWrap img {
+  width: 100%;
+  transition: all 0.5s;
+}
+article > div h2 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #555555;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+}
+article > div p {
+  color: #5c5c5c;
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+}
+@media (max-width:1599px) {
+  article {
+    width: 25%;
+  }
+}
+@media (max-width:899px) {
+  article {
+    width: 33.33%;
+  }
+}
+@media (max-width:767px) {
+  article {
+    width: 50%;
+  }
+}
+@media (max-width:539px) {
+  article {
+    width: 100%;
+  }
+}
+article:hover img {
+  transform: scale(1.5) rotate(-15deg);
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#popup.on {
+  display: flex;
+}
+#popup div {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+#popup .imgWrap {
+  display: flex;
+  justify-content: center;
+}
+#popup .imgWrap img {
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 60vh;
+}
+#popup h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 15px 0;
+  padding-left: 5px;
+}
+#popup p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
