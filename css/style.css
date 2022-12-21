@@ -203,7 +203,7 @@ article > div .imgWrap {
 }
 article > div .imgWrap img {
   width: 100%;
-  transition: all 0.5s;
+  transition: all 0.8s;
 }
 article > div h2 {
   font-size: 14px;
@@ -239,7 +239,7 @@ article > div p {
   }
 }
 article:hover img {
-  transform: scale(1.5) rotate(-15deg);
+  transform: scale(1.3) rotate(-15deg);
 }
 
 #popup {
